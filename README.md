@@ -4,7 +4,7 @@ Grab a file, walk around and drop it.
 
 ## Example
 
-![](https://im7.ezgif.com/tmp/ezgif-7-5bb4b5ba624a.gif)
+![](https://im7.ezgif.com/tmp/ezgif-7-f6bcb7a14433.gif)
 
 
 ## Options
