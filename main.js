@@ -14,16 +14,23 @@ let sourceFilePath = "";
 
 if (program.save) {
   const fileName = program.save;
-  const filePath = `${__dirname}/${fileName}`;
+  const filePath = `${process.cwd()}/${fileName}`;
 
-  fs.writeFileSync("sourceFilePath.txt", filePath, "utf8", (error, data) => {
-    if (error) return console.log(error);
-  });
+  fs.writeFileSync(
+    `${__dirname}/sourceFilePath.txt`,
+    filePath,
+    "utf8",
+    (error, data) => {
+      if (error) return console.log(error);
+    }
+  );
 }
 
 if (program.drop) {
   const dropFileName = program.drop;
-  sourceFilePath = fs.readFileSync("sourceFilePath.txt", { encoding: "utf8" });
+  sourceFilePath = fs.readFileSync(`${__dirname}/sourceFilePath.txt`, {
+    encoding: "utf8"
+  });
 
   fs.createReadStream(sourceFilePath).pipe(fs.createWriteStream(dropFileName));
 }
