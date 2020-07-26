@@ -1,4 +1,4 @@
-# cargo-mule
+# Cargo Mule
 
 Grab a file, walk around and drop it.
 
