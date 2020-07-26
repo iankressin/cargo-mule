@@ -4,24 +4,30 @@ const fs = require("fs");
 const { program } = require("commander");
 
 program
-  .option("-c, --copy <filePath>", "Copy file")
-  .option("-m, --move", "Move file")
-  .option("-d, --drop <newFileName>", "Drop file");
+  .option("-s, --save <filePath>", "Save file reference to drop somewhere else")
+  .option("-d, --drop <newFileName>", "Drop file into current folder")
+  .option("-r, --removeSource", "Delete source file (mv operation)");
 
 program.parse(process.argv);
 
-if (program.copy) {
-  const fileName = program.copy;
+let sourceFilePath = "";
+
+if (program.save) {
+  const fileName = program.save;
   const filePath = `${__dirname}/${fileName}`;
 
-  fs.writeFileSync("file.txt", filePath, "utf8", (error, data) => {
+  fs.writeFileSync("sourceFilePath.txt", filePath, "utf8", (error, data) => {
     if (error) return console.log(error);
   });
 }
 
 if (program.drop) {
   const dropFileName = program.drop;
-  const sourceFilePath = fs.readFileSync("file.txt", { encoding: "utf8" });
+  sourceFilePath = fs.readFileSync("sourceFilePath.txt", { encoding: "utf8" });
 
   fs.createReadStream(sourceFilePath).pipe(fs.createWriteStream(dropFileName));
+}
+
+if (program.removeSource) {
+  fs.unlinkSync(sourceFilePath);
 }

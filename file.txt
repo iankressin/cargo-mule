@@ -1,1 +1,0 @@
-/home/kig/Documents/projects/traveler/node/fileToCopy.txt
