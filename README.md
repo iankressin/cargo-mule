@@ -9,9 +9,9 @@ Grab a file, walk around and drop it.
 
 ## Options
 
-mule -s, --save <fileName> -> Save file reference to drop somewhere else
-     -d, --drop <newFileName> -> Drop file into current folder
-     -r, --removeSource", Delete source file
+-s, --save <fileName> -> Save file reference to drop somewhere else
+-d, --drop <newFileName> -> Drop file into current folder
+-r, --removeSource", Delete source file
      
 ## License
 [MIT]: https://choosealicense.com/licenses/mit/
