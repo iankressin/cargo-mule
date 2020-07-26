@@ -14,4 +14,4 @@ Grab a file, walk around and drop it.
 -r, --removeSource" -> Delete source file\
      
 ## License
-[MIT]: https://choosealicense.com/licenses/mit/
+[MIT](https://choosealicense.com/licenses/mit/)
