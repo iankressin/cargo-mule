@@ -8,16 +8,12 @@ Grab a file, walk around and drop it.
 npm install cargo-mule -g
 ```
 
-## Example
-
-![](https://im7.ezgif.com/tmp/ezgif-7-f6bcb7a14433.gif)
-
-
 ## Options
-```mule```\
-```-s, --save <fileName>```: Save file reference to drop somewhere else\
-```-d, --drop <newFileName>```: Drop file into current folder\
-```-r, --removeSource```: Delete source file
+| Command                     | Description                                                  |
+|-----------------------------|--------------------------------------------------------------|
+| ```mule -s <fileName>```    | Save file reference to drop somewhere else                   |
+| ```mule -d <fileName>```    | Drop file into the current folder                            |
+| ```mule -d <fileName> -r``` | Drop file into the current folder and delete the source file |
      
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
